@@ -16,6 +16,10 @@ Three zero-dependency, build-free static website templates. Same information arc
 
 Each edition is a standalone six-page site with its own `assets/` and `brand.config.js`. Any edition can be copied out and deployed on its own.
 
+另外提供一份 **PHP 8 框架壳**（[php/](php/README.md)）：只有路由、布局、配置、转义与 CSRF，不含页面 HTML，用于把任意静态版套进 PHP。
+
+A **PHP 8 starter shell** is also included ([php/](php/README.md)): routing, layout, config, escaping and CSRF only — no page HTML — ready for porting any static edition into PHP.
+
 ## 共同点 / What They Share
 
 - 纯 HTML / CSS / JavaScript，没有框架、没有 npm 依赖、没有构建步骤
@@ -181,8 +185,12 @@ xf-site-template/
 │   ├── index.html            # 三版入口与差异对照 / comparison page
 │   ├── dark-tech/            # 02 临界智能（独立 6 页 + assets）
 │   └── swiss-minimal/        # 03 筑野建筑（独立 6 页 + assets）
+├── php/                      # PHP 8 框架壳（无页面 HTML，需 PHP 8.0+）
+│   ├── public/index.php      # 唯一入口
+│   ├── app/                  # bootstrap / helpers / layout / router / pages
+│   ├── config/brand.php      # PHP 版品牌配置
+│   └── README.md             # 迁移说明与 AI 提示词
 ├── LICENSE
-├── 修改记录.md
 └── ai-prompt.md              # 交给 AI 做二次改造的提示词 / AI rewrite prompt
 ```
 
