@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title data-page="首页">临界智能 NEXA — GPU 调度与推理基础设施</title>
+  <meta name="description" content="临界智能为 AI 团队提供 GPU 调度、推理服务与模型托管，把集群利用率从 30% 提升到 80% 以上。">
+  <meta name="author" content="github.com/xuanforge-cn">
+  <meta name="copyright" content="github.com/xuanforge-cn">
+  <meta name="theme-color" content="#0A0A0B">
+  <link rel="stylesheet" href="assets/css/site.css">
+  <script src="assets/js/brand.config.js"></script>
+  <script src="assets/js/site.js" defer></script>
+</head>
+<body id="top">
+  <main id="main">
+
+    <section class="hero">
+      <div class="shell hero-inner">
+        <div>
+          <p class="hero-status"><b aria-hidden="true"></b>All systems operational · 99.99% SLA</p>
+          <h1 class="hero-title">
+            <span>把闲置的算力</span>
+            <span class="accent">变成可计费的</span>
+            <span class="outline">GPU 池。</span>
+          </h1>
+          <p class="hero-copy">
+            我们不卖卡，也不卖云主机。临界做的是调度层：把分散在机房、云上与自建集群里的 GPU
+            接成一张网，按任务优先级分配，按实际用量计费。
+          </p>
+          <div class="hero-actions">
+            <a class="btn btn-accent" href="contact.html">预约演示 <span aria-hidden="true">→</span></a>
+            <a class="btn" href="services.html">查看平台能力</a>
+          </div>
+        </div>
+
+        <aside class="hero-panel" aria-label="集群运行状态示例">
+          <div class="hero-panel-head"><span>Cluster live</span><span>CN-EAST-1</span></div>
+          <ul>
+            <li><span>GPU 纳管</span><b>12,480 张</b></li>
+            <li><span>调度延迟 P99</span><b class="on">12 ms</b></li>
+            <li><span>集群利用率</span><b>86.4%</b></li>
+            <li><span>今日任务</span><b>38,920</b></li>
+          </ul>
+          <p class="hero-panel-foot">Sample telemetry · 替换为你的实时数据</p>
+        </aside>
+      </div>
+    </section>
+
+    <div class="ticker" aria-hidden="true">
+      <div class="ticker-track">
+        <div class="ticker-group">
+          <span class="ticker-item">GPU Scheduling</span>
+          <span class="ticker-item">Inference Serving</span>
+          <span class="ticker-item">Model Hosting</span>
+          <span class="ticker-item">On-Premise</span>
+          <span class="ticker-item">Cost Governance</span>
+          <span class="ticker-item">Elastic Scaling</span>
+        </div>
+        <div class="ticker-group">
+          <span class="ticker-item">GPU Scheduling</span>
+          <span class="ticker-item">Inference Serving</span>
+          <span class="ticker-item">Model Hosting</span>
+          <span class="ticker-item">On-Premise</span>
+          <span class="ticker-item">Cost Governance</span>
+          <span class="ticker-item">Elastic Scaling</span>
+        </div>
+      </div>
+    </div>
+
+    <section class="section" aria-labelledby="stats-title">
+      <div class="shell">
+        <p class="label">By the numbers</p>
+        <h2 id="stats-title" class="section-title">用数据说明<span class="thin">，不靠形容词</span></h2>
+        <div class="stats stats-after">
+          <div class="stat">
+            <span class="stat-num"><span data-count="99.99" data-decimals="2">99.99</span><small>%</small></span>
+            <span class="stat-label">过去 12 个月的调度可用性</span>
+          </div>
+          <div class="stat">
+            <span class="stat-num"><span data-count="12">12</span><small>ms</small></span>
+            <span class="stat-label">调度决策 P99 延迟</span>
+          </div>
+          <div class="stat">
+            <span class="stat-num"><span data-count="86">86</span><small>%</small></span>
+            <span class="stat-label">客户集群平均利用率</span>
+          </div>
+          <div class="stat">
+            <span class="stat-num"><span data-count="240">240</span><small>+</small></span>
+            <span class="stat-label">正在使用的 AI 团队</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="cap-title">
+      <div class="shell">
+        <div class="section-head">
+          <div>
+            <p class="label">Platform</p>
+            <h2 class="section-title" id="cap-title">四层能力，<br>拼成一张<span class="thin">算力网</span></h2>
+          </div>
+          <p class="section-note">
+            可以只用其中一层，也可以整套接入。所有能力都提供 API 与 Terraform Provider，
+            不锁定你的调度方式与镜像格式。
+          </p>
+        </div>
+
+        <div class="bento">
+          <article class="tile reveal">
+            <span class="tile-index">01 / SCHEDULER</span>
+            <h3>GPU 调度云<em>Priority-aware scheduling</em></h3>
+            <p>按优先级、显存与拓扑分配任务，支持抢占、排队与亲和性调度，碎片率控制在 4% 以内。</p>
+            <div class="tile-tags"><span>抢占式队列</span><span>拓扑感知</span><span>多集群</span></div>
+          </article>
+
+          <article class="tile reveal" data-delay="1">
+            <span class="tile-index">02 / INFERENCE</span>
+            <h3>推理服务<em>Dynamic batching</em></h3>
+            <p>动态批处理与 KV Cache 复用，在保证 P99 延迟的前提下，把单卡吞吐提升 2–4 倍。</p>
+            <div class="tile-tags"><span>自动扩缩</span><span>灰度发布</span><span>按 token 计费</span></div>
+          </article>
+
+          <article class="tile reveal" data-delay="2">
+            <span class="tile-index">03 / HOSTING</span>
+            <h3>模型托管<em>Bring your own image</em></h3>
+            <p>直接上传容器镜像或权重文件，平台负责健康检查、版本回滚与灰度流量，不需要改代码。</p>
+            <div class="tile-tags"><span>版本回滚</span><span>健康检查</span><span>灰度流量</span></div>
+          </article>
+
+          <article class="tile reveal" data-delay="3">
+            <span class="tile-index">04 / ON-PREMISE</span>
+            <h3>私有化部署<em>Air-gapped ready</em></h3>
+            <p>在客户机房完成调度层安装，模型与数据不出内网，支持离线升级与等保三级要求。</p>
+            <div class="tile-tags"><span>离线安装</span><span>不出内网</span><span>等保三级</span></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="work-title">
+      <div class="shell">
+        <div class="section-head">
+          <div>
+            <p class="label">Customers</p>
+            <h2 class="section-title" id="work-title">已经跑起来的<span class="thin">团队</span></h2>
+          </div>
+          <p class="section-note">下面三个项目可以公开。所有数字来自客户侧的账单与监控，不是我们的估算。</p>
+        </div>
+        <div class="work-grid" data-work-grid data-filter="featured" data-limit="3"></div>
+        <div class="work-more">
+          <a class="btn" href="work.html">查看全部客户 <span aria-hidden="true">→</span></a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="steps-title">
+      <div class="shell">
+        <div class="section-head">
+          <div>
+            <p class="label">Onboarding</p>
+            <h2 class="section-title" id="steps-title">接入只需要<span class="thin">四步</span></h2>
+          </div>
+          <p class="section-note">不需要采购硬件，也不需要改训练框架。第一周就能看到真实的调度数据。</p>
+        </div>
+
+        <div class="steps">
+          <div class="step reveal">
+            <span class="step-no">STEP 01</span>
+            <h3>接入集群</h3>
+            <p>通过 Agent 接入现有 K8s 集群或裸金属，10 分钟内完成注册。</p>
+          </div>
+          <div class="step reveal" data-delay="1">
+            <span class="step-no">STEP 02</span>
+            <h3>导入任务</h3>
+            <p>用现有镜像或 YAML 提交任务，平台自动识别显存与拓扑需求。</p>
+          </div>
+          <div class="step reveal" data-delay="2">
+            <span class="step-no">STEP 03</span>
+            <h3>压测对比</h3>
+            <p>并行跑一周真实负载，输出利用率、延迟与成本的对照报告。</p>
+          </div>
+          <div class="step reveal" data-delay="3">
+            <span class="step-no">STEP 04</span>
+            <h3>切换计费</h3>
+            <p>确认数据后按实际用量结算，随时可以退回原有调度方式。</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="quote-band">
+      <div class="shell quote">
+        <blockquote class="quote-text reveal">
+          我们原以为要再买 200 张卡才能撑住下一季度，接入后发现有 40% 的卡<em>在空转</em>。
+          调度换掉之后，采购计划直接取消了。
+        </blockquote>
+        <div class="quote-meta reveal" data-delay="1">
+          <strong>周航</strong>
+          驭行科技 · 基础设施负责人<br>
+          480 张卡混合集群 · 2025
+        </div>
+      </div>
+    </section>
+
+    <section class="cta">
+      <div class="shell cta-inner">
+        <div>
+          <p class="label">Next step</p>
+          <h2 class="cta-title">30 天免费压测<br>先看数据再决定。</h2>
+        </div>
+        <div class="cta-side">
+          <p>我们提供独立的压测环境，接入你现有的集群，不改动生产调度。压测结束给一份可核算的成本报告。</p>
+          <a class="btn" href="contact.html">预约压测 <span aria-hidden="true">→</span></a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+</body>
+</html>

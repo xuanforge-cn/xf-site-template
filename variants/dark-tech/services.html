@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title data-page="平台">平台 · 临界智能 NEXA</title>
+  <meta name="description" content="GPU 调度云、推理服务、模型托管与私有化部署：临界智能的四层平台能力与计费方式。">
+  <meta name="author" content="github.com/xuanforge-cn">
+  <meta name="copyright" content="github.com/xuanforge-cn">
+  <meta name="theme-color" content="#0A0A0B">
+  <link rel="stylesheet" href="assets/css/site.css">
+  <script src="assets/js/brand.config.js"></script>
+  <script src="assets/js/site.js" defer></script>
+</head>
+<body id="top">
+  <main id="main">
+
+    <section class="page-head">
+      <div class="shell">
+        <nav class="crumb" aria-label="面包屑">
+          <a href="index.html">首页</a><span>/</span><span>平台</span>
+        </nav>
+        <h1 class="page-title">四层能力<br><span class="accent">一套调度层</span></h1>
+        <p class="page-lead">
+          所有能力共用同一套资源视图与计费口径。你可以只接一层，也可以整套替换掉现有的
+          Slurm 或 K8s 调度插件，迁移过程中生产任务不中断。
+        </p>
+      </div>
+    </section>
+
+    <section class="section" aria-label="平台能力">
+      <div class="shell">
+        <div class="spec-list">
+
+          <article class="spec reveal">
+            <span class="spec-no">01</span>
+            <h2>GPU 调度云<span>Priority-aware scheduler</span></h2>
+            <div>
+              <p>把多机房、多云、裸金属的卡接成一张资源池。按优先级与显存需求排队，高优任务可抢占低优任务，被抢占的任务自动回到队列等待，不需要人工重提。</p>
+              <ul class="spec-points">
+                <li>拓扑感知分配</li>
+                <li>抢占与回填</li>
+                <li>碎片整理</li>
+                <li>多集群联邦</li>
+                <li>配额与租户隔离</li>
+                <li>调度日志可追溯</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="spec reveal">
+            <span class="spec-no">02</span>
+            <h2>推理服务<span>Dynamic batching</span></h2>
+            <div>
+              <p>面向在线业务的推理层。动态批处理把并发请求合并成更大的批次，KV Cache 在请求之间复用，单卡吞吐通常能提升 2–4 倍，而 P99 延迟保持在 SLA 之内。</p>
+              <ul class="spec-points">
+                <li>按 token 计费</li>
+                <li>自动扩缩容</li>
+                <li>灰度与回滚</li>
+                <li>多模型并行</li>
+                <li>请求级监控</li>
+                <li>OpenAI 兼容接口</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="spec reveal">
+            <span class="spec-no">03</span>
+            <h2>模型托管<span>Bring your own image</span></h2>
+            <div>
+              <p>不用改训练代码，也不用重写推理服务。上传容器镜像或权重文件，平台负责启动、健康检查、版本切换与流量灰度，冷启动预热把首请求延迟压到 2 秒以内。</p>
+              <ul class="spec-points">
+                <li>任意框架镜像</li>
+                <li>版本与回滚</li>
+                <li>冷启动预热</li>
+                <li>权重加密存储</li>
+                <li>按副本计费</li>
+                <li>日志与指标接入</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="spec reveal">
+            <span class="spec-no">04</span>
+            <h2>私有化部署<span>Air-gapped ready</span></h2>
+            <div>
+              <p>面向金融、医疗与政务客户。在自建机房完成调度层安装，模型、数据与日志不出内网，支持完全离线的安装包与升级包，交付时附带等保三级所需材料。</p>
+              <ul class="spec-points">
+                <li>离线安装包</li>
+                <li>数据不出内网</li>
+                <li>等保三级材料</li>
+                <li>国产 GPU 适配</li>
+                <li>双人运维审计</li>
+                <li>年度驻场支持</li>
+              </ul>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="price-title">
+      <div class="shell">
+        <div class="section-head">
+          <div>
+            <p class="label">Pricing</p>
+            <h2 class="section-title" id="price-title">按用量<span class="thin">，不按人头</span></h2>
+          </div>
+          <p class="section-note">
+            调度层本身不单独收费。我们按实际调度成功的 GPU 秒数结算，闲置的卡不计费，
+            这也是我们有信心让你先压测的原因。
+          </p>
+        </div>
+
+        <div class="prices">
+          <div class="price reveal">
+            <span class="price-tag">Starter</span>
+            <h3>按量计费</h3>
+            <p class="num">¥0.98<small>/ GPU·小时</small></p>
+            <ul>
+              <li>不限集群数量</li>
+              <li>基础调度策略</li>
+              <li>7×12 工单支持</li>
+              <li>日级用量账单</li>
+            </ul>
+            <a class="btn" href="contact.html">开始压测</a>
+          </div>
+
+          <div class="price is-hot reveal" data-delay="1">
+            <span class="price-tag">Growth · 最常见</span>
+            <h3>年度承诺</h3>
+            <p class="num">¥0.71<small>/ GPU·小时</small></p>
+            <ul>
+              <li>用量阶梯折扣</li>
+              <li>抢占与回填策略</li>
+              <li>7×24 技术响应</li>
+              <li>专属成本看板</li>
+              <li>季度优化复盘</li>
+            </ul>
+            <a class="btn btn-accent" href="contact.html">获取报价 <span aria-hidden="true">→</span></a>
+          </div>
+
+          <div class="price reveal" data-delay="2">
+            <span class="price-tag">Enterprise</span>
+            <h3>私有化</h3>
+            <p class="num">面议<small>按集群规模</small></p>
+            <ul>
+              <li>离线部署与升级</li>
+              <li>等保三级材料</li>
+              <li>国产 GPU 适配</li>
+              <li>驻场与培训</li>
+            </ul>
+            <a class="btn" href="contact.html">联系方案</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="faq-title">
+      <div class="shell">
+        <div class="section-head">
+          <div>
+            <p class="label">FAQ</p>
+            <h2 class="section-title" id="faq-title">技术团队<span class="thin">会问的</span></h2>
+          </div>
+          <p class="section-note">更细的问题可以直接约一次技术对接，由写调度器的人来回答。</p>
+        </div>
+
+        <div class="faq">
+          <details>
+            <summary>接入会改动现有训练代码吗？</summary>
+            <p>不会。K8s 集群通过 Agent 注册，任务仍用原有 YAML 提交；Slurm 集群可以用兼容层接管。唯一的变化是资源申请会经过我们的调度器。</p>
+          </details>
+          <details>
+            <summary>被抢占的任务会丢进度吗？</summary>
+            <p>不会丢已保存的 checkpoint。平台在抢占前发送 SIGTERM 并给出 90 秒宽限期，任务回到队列后从最近的 checkpoint 续跑。</p>
+          </details>
+          <details>
+            <summary>支持国产 GPU 吗？</summary>
+            <p>支持昇腾、寒武纪与海光的特定型号，需要按型号做适配验证，通常在私有化项目中一起完成。</p>
+          </details>
+          <details>
+            <summary>数据会离开我们的机房吗？</summary>
+            <p>私有化模式下不会。SaaS 模式只上报调度元数据（任务 ID、显存需求、耗时），不上传模型权重与训练数据。</p>
+          </details>
+          <details>
+            <summary>能不能只买调度，不用你们的推理服务？</summary>
+            <p>可以。四层能力互相独立，只接调度层是最常见的用法。</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta">
+      <div class="shell cta-inner">
+        <div>
+          <p class="label">Get started</p>
+          <h2 class="cta-title">先压测，再谈合同。</h2>
+        </div>
+        <div class="cta-side">
+          <p>带上你的集群规模与当前利用率，我们会在 2 小时内给你一份初步的优化空间估算。</p>
+          <a class="btn" href="contact.html">联系技术团队 <span aria-hidden="true">→</span></a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+</body>
+</html>

@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title data-page="联系">联系 · 远山 FARHILL</title>
+  <meta name="description" content="告诉我们你的项目目标、时间与预算范围，远山会在一个工作日内回复。">
+  <meta name="author" content="github.com/xuanforge-cn">
+  <meta name="copyright" content="github.com/xuanforge-cn">
+  <link rel="stylesheet" href="assets/css/site.css">
+  <script src="assets/js/brand.config.js"></script>
+  <script src="assets/js/site.js" defer></script>
+</head>
+<body id="top">
+  <main id="main">
+
+    <section class="page-hero">
+      <div class="shell">
+        <nav class="breadcrumb" aria-label="面包屑">
+          <a href="index.html">首页</a>
+          <span aria-hidden="true">/</span>
+          <span>联系</span>
+        </nav>
+        <div class="page-hero-inner">
+          <h1 class="page-title">说说你的<em>项目</em>，<br>越具体越好</h1>
+          <p class="page-lead">
+            我们不需要一份完美的需求文档。目标、时间、预算范围，加上你现在最头疼的问题，
+            就足够开始第一次对话。
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" aria-label="联系表单">
+      <div class="shell contact-grid">
+
+        <div>
+          <form class="contact-form" data-contact-form novalidate>
+            <div class="field-row">
+              <div class="field">
+                <label for="name">称呼 <span aria-hidden="true">*</span></label>
+                <input id="name" name="name" type="text" autocomplete="name" placeholder="你怎么称呼" required>
+                <p class="field-error" aria-live="polite"></p>
+              </div>
+              <div class="field">
+                <label for="email">邮箱 <span aria-hidden="true">*</span></label>
+                <input id="email" name="email" type="email" autocomplete="email" placeholder="name@company.com" required>
+                <p class="field-error" aria-live="polite"></p>
+              </div>
+            </div>
+
+            <div class="field-row">
+              <div class="field">
+                <label for="company">公司 / 团队</label>
+                <input id="company" name="company" type="text" autocomplete="organization" placeholder="可选">
+              </div>
+              <div class="field">
+                <label for="budget">预算范围</label>
+                <select id="budget" name="budget">
+                  <option value="">暂不确定</option>
+                  <option value="5-12">5–12 万</option>
+                  <option value="12-30">12–30 万</option>
+                  <option value="30-60">30–60 万</option>
+                  <option value="60+">60 万以上</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="field">
+              <label for="message">项目情况 <span aria-hidden="true">*</span></label>
+              <textarea id="message" name="message" placeholder="我们在做什么、想解决什么问题、期望什么时候上线……" required></textarea>
+              <p class="field-error" aria-live="polite"></p>
+            </div>
+
+            <div class="form-foot">
+              <button class="btn btn-ink" type="submit">
+                发送信息<span class="btn-arrow" aria-hidden="true">→</span>
+              </button>
+              <p class="form-hint">我们只把这些信息用于本次沟通，不会用于任何推送。</p>
+            </div>
+            <p class="form-status" role="status" data-form-status></p>
+          </form>
+        </div>
+
+        <aside class="contact-panel">
+          <p class="eyebrow eyebrow-light">直接联系</p>
+          <h2>不喜欢填表？<br>发邮件也一样。</h2>
+          <ul class="contact-list">
+            <li>
+              <span>邮箱</span>
+              <a href="mailto:hello@farhill.studio" data-contact="email">hello@farhill.studio</a>
+            </li>
+            <li>
+              <span>电话</span>
+              <a href="tel:+862150302040" data-contact="phone">021 5030 2040</a>
+            </li>
+            <li>
+              <span>工作室</span>
+              <p data-contact="address">上海市静安区陕西北路 688 号 5F</p>
+            </li>
+            <li>
+              <span>工作时间</span>
+              <p data-contact="hours">周一至周五 10:00 – 19:00</p>
+            </li>
+          </ul>
+          <div class="contact-social" data-social-list></div>
+        </aside>
+
+      </div>
+    </section>
+
+    <section class="section section-tight" aria-labelledby="contact-faq-title">
+      <div class="shell">
+        <div class="section-head">
+          <div>
+            <p class="eyebrow">常见问题</p>
+            <h2 class="section-title" id="contact-faq-title">沟通<em>之前</em></h2>
+          </div>
+          <p class="section-note">第一次合作总会有一些不确定，这里是我们被问得最多的几个问题。</p>
+        </div>
+        <div class="faq">
+          <details>
+            <summary>多久能收到回复？</summary>
+            <p class="faq-answer">工作日通常 24 小时内。如果超过两天没有收到，可能是邮件被拦截了，请直接拨打电话。</p>
+          </details>
+          <details>
+            <summary>第一次沟通需要准备什么？</summary>
+            <p class="faq-answer">不需要准备提案或简报。带着你的目标、时间节点和预算范围来就好，我们会用 30 分钟帮你理清需求边界。</p>
+          </details>
+          <details>
+            <summary>可以只做一小部分吗？</summary>
+            <p class="faq-answer">可以。比如只做标志优化、只做官网改版。但如果核心问题没解决，我们会诚实告诉你，而不是先接下来再说。</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+  </main>
+</body>
+</html>

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title data-page="联系">联系 · 临界智能 NEXA</title>
+  <meta name="description" content="提交集群规模与当前利用率，临界智能会在 2 小时内给出初步优化空间估算。">
+  <meta name="author" content="github.com/xuanforge-cn">
+  <meta name="copyright" content="github.com/xuanforge-cn">
+  <meta name="theme-color" content="#0A0A0B">
+  <link rel="stylesheet" href="assets/css/site.css">
+  <script src="assets/js/brand.config.js"></script>
+  <script src="assets/js/site.js" defer></script>
+</head>
+<body id="top">
+  <main id="main">
+
+    <section class="page-head">
+      <div class="shell">
+        <nav class="crumb" aria-label="面包屑">
+          <a href="index.html">首页</a><span>/</span><span>联系</span>
+        </nav>
+        <h1 class="page-title">说说你的集群<br><span class="accent">和账单</span></h1>
+        <p class="page-lead">
+          不需要准备 PPT。卡的型号、数量、当前利用率、每月花多少，这四件事说清楚，
+          我们就能判断有没有优化空间。
+        </p>
+      </div>
+    </section>
+
+    <section class="section" aria-label="联系表单">
+      <div class="shell contact-grid">
+        <form class="form" data-form novalidate>
+          <div class="field-row">
+            <div class="field">
+              <label for="name">称呼 *</label>
+              <input id="name" name="name" type="text" autocomplete="name" placeholder="怎么称呼你" required>
+              <p class="field-error" aria-live="polite"></p>
+            </div>
+            <div class="field">
+              <label for="email">工作邮箱 *</label>
+              <input id="email" name="email" type="email" autocomplete="email" placeholder="name@company.com" required>
+              <p class="field-error" aria-live="polite"></p>
+            </div>
+          </div>
+
+          <div class="field-row">
+            <div class="field">
+              <label for="company">公司 / 团队</label>
+              <input id="company" name="company" type="text" autocomplete="organization" placeholder="可选">
+            </div>
+            <div class="field">
+              <label for="scale">集群规模</label>
+              <select id="scale" name="scale">
+                <option value="">暂不确定</option>
+                <option value="small">8 张卡以内</option>
+                <option value="mid">8–64 张卡</option>
+                <option value="large">64–256 张卡</option>
+                <option value="xlarge">256 张卡以上</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="field">
+            <label for="message">集群情况 *</label>
+            <textarea id="message" name="message" placeholder="卡型号、数量、当前利用率、月账单，以及最想解决的问题。" required></textarea>
+            <p class="field-error" aria-live="polite"></p>
+          </div>
+
+          <div class="form-foot">
+            <button class="btn btn-accent" type="submit">发送需求 →</button>
+            <p class="form-hint">信息仅用于本次技术对接，不会用于营销推送。</p>
+          </div>
+          <p class="form-status" role="status" data-form-status></p>
+        </form>
+
+        <aside class="contact-card">
+          <p class="label">Direct</p>
+          <h2>也可以直接<br>找技术值班。</h2>
+          <ul>
+            <li><span>邮箱</span><a href="mailto:hello@nexa.ai" data-contact="email">hello@nexa.ai</a></li>
+            <li><span>电话</span><a href="tel:+864008201130" data-contact="phone">400 820 1130</a></li>
+            <li><span>地址</span><p data-contact="address">上海市徐汇区云锦路 500 号 12F</p></li>
+            <li><span>响应</span><p data-contact="hours">7×24 技术响应</p></li>
+          </ul>
+          <div class="contact-links" data-social-list></div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="note-title">
+      <div class="shell">
+        <div class="section-head">
+          <div>
+            <p class="label">Before you write</p>
+            <h2 class="section-title" id="note-title">先说清楚<span class="thin">这几件事</span></h2>
+          </div>
+          <p class="section-note">信息越具体，第一次沟通越省时间。</p>
+        </div>
+        <div class="faq">
+          <details>
+            <summary>你们支持哪些卡？</summary>
+            <p>NVIDIA A100 / H100 / H800 / L40S 全系，国产卡支持昇腾 910B 与寒武纪思元部分型号，需按项目验证。</p>
+          </details>
+          <details>
+            <summary>压测需要停生产吗？</summary>
+            <p>不需要。压测环境与生产调度并行运行，只读取资源指标，不接管生产任务。</p>
+          </details>
+          <details>
+            <summary>多久能上线？</summary>
+            <p>SaaS 模式通常一周内完成接入；私有化部署取决于机房与网络条件，一般 4–6 周。</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+  </main>
+</body>
+</html>

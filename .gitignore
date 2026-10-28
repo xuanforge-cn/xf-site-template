@@ -1,0 +1,19 @@
+# 系统与编辑器
+.DS_Store
+Thumbs.db
+*.log
+.idea/
+.vscode/
+
+# 依赖与构建产物
+node_modules/
+dist/
+
+# 敏感信息（禁止提交）
+.env
+.env.*
+*.jks
+*.keystore
+keystore.properties
+*.pem
+id_rsa

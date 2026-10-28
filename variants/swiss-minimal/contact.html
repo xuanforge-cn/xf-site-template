@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title data-page="联系">联系 · 筑野建筑 ZHUYE ATELIER</title>
+  <meta name="description" content="把场地位置、面积与大致预算发给我们，筑野建筑会在两个工作日内回复。">
+  <meta name="author" content="github.com/xuanforge-cn">
+  <meta name="copyright" content="github.com/xuanforge-cn">
+  <meta name="theme-color" content="#F7F6F3">
+  <link rel="stylesheet" href="assets/css/site.css">
+  <script src="assets/js/brand.config.js"></script>
+  <script src="assets/js/site.js" defer></script>
+</head>
+<body id="top">
+  <main id="main">
+
+    <section class="page-head">
+      <div class="wrap">
+        <nav class="crumb" aria-label="面包屑">
+          <a href="index.html">首页</a><span>/</span><span>联系</span>
+        </nav>
+        <h1 class="page-title">告诉我们<br>场地<span class="accent">在哪里</span></h1>
+        <p class="page-lead">
+          地址、面积、预算范围，加上你脑子里那个还没说清楚的画面。第一次沟通不收费用，
+          也不会先让你填任务书。
+        </p>
+      </div>
+    </section>
+
+    <section class="section" aria-label="联系表单">
+      <div class="wrap contact-grid">
+        <form class="form" data-form novalidate>
+          <div class="field-row">
+            <div class="field">
+              <label for="name">称呼 *</label>
+              <input id="name" name="name" type="text" autocomplete="name" placeholder="怎么称呼你" required>
+              <p class="field-error" aria-live="polite"></p>
+            </div>
+            <div class="field">
+              <label for="email">邮箱 *</label>
+              <input id="email" name="email" type="email" autocomplete="email" placeholder="name@example.com" required>
+              <p class="field-error" aria-live="polite"></p>
+            </div>
+          </div>
+
+          <div class="field-row">
+            <div class="field">
+              <label for="place">场地位置</label>
+              <input id="place" name="place" type="text" placeholder="城市 / 区域，可选">
+            </div>
+            <div class="field">
+              <label for="type">项目类型</label>
+              <select id="type" name="type">
+                <option value="">暂不确定</option>
+                <option value="house">住宅</option>
+                <option value="public">文化 / 公共建筑</option>
+                <option value="renewal">旧改 / 城市更新</option>
+                <option value="interior">室内 / 展陈</option>
+                <option value="research">前期研究</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="field">
+            <label for="message">项目情况 *</label>
+            <textarea id="message" name="message" placeholder="场地面积、现状、大致预算与期望时间。" required></textarea>
+            <p class="field-error" aria-live="polite"></p>
+          </div>
+
+          <div class="form-foot">
+            <button class="btn" type="submit">发送 →</button>
+            <p class="form-hint">我们只用这些信息回复本次咨询。</p>
+          </div>
+          <p class="form-status" role="status" data-form-status></p>
+        </form>
+
+        <aside class="contact-info">
+          <p class="tag">Studio</p>
+          <h2>也可以直接到事务所坐坐，<br>提前一天约即可。</h2>
+          <ul>
+            <li><span>邮箱</span><a href="mailto:studio@zhuye.archi" data-contact="email">studio@zhuye.archi</a></li>
+            <li><span>电话</span><a href="tel:+862162884170" data-contact="phone">021 6288 4170</a></li>
+            <li><span>地址</span><p data-contact="address">上海市徐汇区永嘉路 321 号 2F</p></li>
+            <li><span>办公时间</span><p data-contact="hours">周一至周五 9:30 – 18:30</p></li>
+          </ul>
+          <div class="contact-social" data-social-list></div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="faq-title">
+      <div class="wrap">
+        <div class="section-head">
+          <div>
+            <p class="tag">Before writing</p>
+            <h2 class="section-title" id="faq-title">写之前<br>可以想想</h2>
+          </div>
+          <p class="section-note">这些问题想清楚，第一次沟通能省一半时间。</p>
+        </div>
+        <div class="faq">
+          <details>
+            <summary>预算大概要准备多少？</summary>
+            <p>住宅类项目设计费通常在 15–35 万元区间，公共建筑按面积计算。我们会在踏勘后给一份分阶段的费用清单。</p>
+          </details>
+          <details>
+            <summary>多久能开始？</summary>
+            <p>取决于当期排期。通常签约后 2–4 周内完成踏勘与第一次方案汇报。</p>
+          </details>
+          <details>
+            <summary>可以先看方案再决定吗？</summary>
+            <p>我们会先做一次免费沟通与现场踏勘，判断项目是否合适。正式方案需要签约后开始，这是对双方时间的保护。</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+  </main>
+</body>
+</html>

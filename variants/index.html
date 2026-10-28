@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>版本入口 · xf-site-template</title>
+  <meta name="description" content="同一套内容结构的三种官网排版：纸感编辑版、深色科技版、瑞士极简版。">
+  <meta name="author" content="github.com/xuanforge-cn">
+  <meta name="copyright" content="github.com/xuanforge-cn">
+  <style>
+    :root {
+      --paper: #f7f6f3;
+      --ink: #111110;
+      --muted: #6b6b66;
+      --line: #d8d6cf;
+      --accent: #d93a2b;
+      --sans: "Helvetica Neue", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", system-ui, sans-serif;
+      --mono: "SF Mono", "JetBrains Mono", Consolas, monospace;
+    }
+    * { box-sizing: border-box; }
+    h1, h2, p { margin: 0; }
+    body {
+      margin: 0;
+      background: var(--paper);
+      color: var(--ink);
+      font-family: var(--sans);
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+    }
+    .wrap {
+      width: min(1180px, 100%);
+      margin: 0 auto;
+      padding: 0 clamp(20px, 4vw, 48px);
+    }
+    header {
+      border-bottom: 2px solid var(--ink);
+      padding: 22px 0;
+    }
+    .head {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 20px;
+    }
+    .brand {
+      font-size: 18px;
+      font-weight: 700;
+      letter-spacing: 0.02em;
+    }
+    .brand span {
+      font-family: var(--mono);
+      font-size: 9px;
+      font-weight: 400;
+      letter-spacing: 0.22em;
+      color: var(--muted);
+      margin-left: 10px;
+    }
+    .meta {
+      font-family: var(--mono);
+      font-size: 10px;
+      letter-spacing: 0.14em;
+      color: var(--muted);
+      text-transform: uppercase;
+    }
+    .intro {
+      padding: clamp(40px, 6vw, 80px) 0 clamp(28px, 4vw, 44px);
+    }
+    .tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-family: var(--mono);
+      font-size: 10px;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+    .tag::before {
+      content: "";
+      width: 5px;
+      height: 5px;
+      background: var(--accent);
+    }
+    h1 {
+      margin: 18px 0 0;
+      font-size: clamp(2rem, 5vw, 3.8rem);
+      font-weight: 700;
+      line-height: 1.05;
+      letter-spacing: -0.05em;
+      max-width: 16em;
+    }
+    .intro p {
+      margin: 18px 0 0;
+      max-width: 52ch;
+      font-size: 14.5px;
+      color: var(--muted);
+    }
+    .list {
+      border-top: 1px solid var(--ink);
+    }
+    .item {
+      display: grid;
+      grid-template-columns: 56px minmax(0, 1fr) minmax(0, 1.1fr) auto;
+      gap: clamp(14px, 2.5vw, 40px);
+      align-items: start;
+      padding: clamp(22px, 3vw, 34px) 0;
+      border-bottom: 1px solid var(--line);
+      color: inherit;
+      text-decoration: none;
+      transition: color 0.25s ease;
+    }
+    .no {
+      font-family: var(--mono);
+      font-size: 11px;
+      letter-spacing: 0.14em;
+      color: var(--accent);
+      padding-top: 7px;
+    }
+    .name {
+      font-size: clamp(1.3rem, 2.2vw, 1.8rem);
+      font-weight: 700;
+      letter-spacing: -0.03em;
+      line-height: 1.2;
+    }
+    .name em {
+      display: block;
+      margin-top: 8px;
+      font-family: var(--mono);
+      font-style: normal;
+      font-size: 9px;
+      font-weight: 400;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+    .desc {
+      font-size: 13.5px;
+      color: var(--muted);
+    }
+    .desc b {
+      display: block;
+      margin-top: 8px;
+      font-family: var(--mono);
+      font-size: 9px;
+      font-weight: 400;
+      letter-spacing: 0.12em;
+      color: var(--ink);
+    }
+    .enter {
+      align-self: center;
+      font-family: var(--mono);
+      font-size: 10px;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      border-bottom: 1px solid var(--ink);
+      padding-bottom: 3px;
+      white-space: nowrap;
+    }
+    .item:hover .name { color: var(--accent); }
+    .item:hover .enter { color: var(--accent); border-color: var(--accent); }
+
+    .compare {
+      padding: clamp(40px, 5vw, 64px) 0;
+    }
+    .compare h2 {
+      margin: 0 0 20px;
+      font-family: var(--mono);
+      font-size: 10px;
+      font-weight: 400;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 12.5px;
+    }
+    th,
+    td {
+      text-align: left;
+      padding: 11px 12px 11px 0;
+      border-bottom: 1px solid var(--line);
+      vertical-align: top;
+    }
+    th {
+      font-family: var(--mono);
+      font-size: 9px;
+      font-weight: 400;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+    td:first-child {
+      font-weight: 600;
+      white-space: nowrap;
+    }
+    footer {
+      border-top: 2px solid var(--ink);
+      margin-top: 20px;
+      padding: 16px 0 30px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 8px 24px;
+      font-family: var(--mono);
+      font-size: 9px;
+      letter-spacing: 0.1em;
+      color: var(--muted);
+    }
+    footer a {
+      color: inherit;
+      border-bottom: 1px solid var(--line);
+      text-decoration: none;
+    }
+    footer a:hover { color: var(--accent); border-color: var(--accent); }
+    @media (max-width: 860px) {
+      .item {
+        grid-template-columns: 40px minmax(0, 1fr);
+      }
+      .desc { grid-column: 2; }
+      .enter { grid-column: 2; justify-self: start; }
+      .meta { display: none; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrap head">
+      <p class="brand">xf-site-template<span>THREE EDITIONS</span></p>
+      <p class="meta">零依赖 · 静态站点 · MIT</p>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section class="intro">
+      <p class="tag">Choose a layout</p>
+      <h1>同一套内容结构，<br>三种完全不同的排版性格。</h1>
+      <p>
+        三版都是独立可运行的站点，各自 6 个页面、各自一份品牌配置（assets/js/brand.config.js）。
+        它们共用信息结构，但视觉语言、导航形式、页脚与图片空态都不相同——不是换色，是换设计。
+      </p>
+    </section>
+
+    <section class="list" aria-label="版本列表">
+      <a class="item" href="../index.html">
+        <span class="no">01</span>
+        <h2 class="name">远山 FARHILL<em>Editorial / Paper</em></h2>
+        <p class="desc">
+          暖纸底色、宋体大标题、砖红强调，案例双列错落，页脚描边巨字。
+          <b>适合：设计工作室、咨询、文化机构</b>
+        </p>
+        <span class="enter">进入版本 →</span>
+      </a>
+
+      <a class="item" href="dark-tech/index.html">
+        <span class="no">02</span>
+        <h2 class="name">临界智能 NEXA<em>Dark / Data</em></h2>
+        <p class="desc">
+          近黑背景、荧光绿强调、等宽数据与实时状态面板，左侧竖向导航栏，Bento 能力卡。
+          <b>适合：AI 基础设施、开发者工具、云服务</b>
+        </p>
+        <span class="enter">进入版本 →</span>
+      </a>
+
+      <a class="item" href="swiss-minimal/index.html">
+        <span class="no">03</span>
+        <h2 class="name">筑野建筑 ZHUYE<em>Swiss / Grid</em></h2>
+        <p class="desc">
+          纯白底、粗黑标题、严格网格与表格化列表，单点红，双行页头，实心巨字页脚。
+          <b>适合：建筑事务所、工业设计、专业服务</b>
+        </p>
+        <span class="enter">进入版本 →</span>
+      </a>
+    </section>
+
+    <section class="compare">
+      <h2>Rendering differences / 三版差异对照</h2>
+      <table>
+        <thead>
+          <tr><th>维度</th><th>远山</th><th>临界智能</th><th>筑野建筑</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>导航</td><td>吸顶单行</td><td>吸顶 + 左侧竖栏</td><td>非吸顶双行</td></tr>
+          <tr><td>首屏</td><td>衬线巨标题 + 环形装饰</td><td>荧光标题 + 状态面板</td><td>粗黑标题 + 12 栏网格</td></tr>
+          <tr><td>服务呈现</td><td>悬停整行反色</td><td>Bento 卡片</td><td>表格化行</td></tr>
+          <tr><td>案例网格</td><td>2 列错落 4:3</td><td>2 列卡片 16:10</td><td>3 列方图 1:1</td></tr>
+          <tr><td>页脚</td><td>深色 + 描边巨字</td><td>深色 + 荧光按钮</td><td>白底 + 实心巨字</td></tr>
+          <tr><td>图片空态</td><td>斜线纹理</td><td>点阵纹理</td><td>方格网格</td></tr>
+          <tr><td>强调色</td><td>砖红</td><td>荧光绿</td><td>正红</td></tr>
+        </tbody>
+      </table>
+    </section>
+  </main>
+
+  <footer class="wrap">
+    <p>版权所有 © 2026 <a href="https://github.com/xuanforge-cn" target="_blank" rel="noopener noreferrer">github.com/xuanforge-cn</a></p>
+    <p>MIT License · 三个版本共用同一套页面结构</p>
+  </footer>
+</body>
+</html>

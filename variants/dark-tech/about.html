@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title data-page="关于">关于 · 临界智能 NEXA</title>
+  <meta name="description" content="临界智能成立于 2019 年，由一批做集群调度与推理系统的人组成，专注把 GPU 利用率做上去。">
+  <meta name="author" content="github.com/xuanforge-cn">
+  <meta name="copyright" content="github.com/xuanforge-cn">
+  <meta name="theme-color" content="#0A0A0B">
+  <link rel="stylesheet" href="assets/css/site.css">
+  <script src="assets/js/brand.config.js"></script>
+  <script src="assets/js/site.js" defer></script>
+</head>
+<body id="top">
+  <main id="main">
+
+    <section class="page-head">
+      <div class="shell">
+        <nav class="crumb" aria-label="面包屑">
+          <a href="index.html">首页</a><span>/</span><span>关于</span>
+        </nav>
+        <h1 class="page-title">一群做调度<span class="accent">的人</span></h1>
+        <p class="page-lead">
+          我们不是从大模型开始的，是从集群开始的。2019 年之前，团队在两家云厂商做调度器与
+          推理网关，见过太多卡在空转，也见过太多团队为排队付钱。
+        </p>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="story-title">
+      <div class="shell about-grid">
+        <aside class="about-facts" aria-label="公司基本信息">
+          <ul>
+            <li><span>成立时间</span><b>2019</b></li>
+            <li><span>团队规模</span><b>40 人</b></li>
+            <li><span>研发占比</span><b>72%</b></li>
+            <li><span>办公地点</span><b>上海 / 北京 / 新加坡</b></li>
+            <li><span>融资阶段</span><b>B 轮</b></li>
+            <li><span>纳管 GPU</span><b>12,480 张</b></li>
+          </ul>
+        </aside>
+
+        <div class="about-body">
+          <p>
+            临界智能只做一件事：让 GPU 不闲着。我们把调度、推理、托管与私有化拆成四层，
+            每一层都可以单独替换，也可以拼在一起用。
+          </p>
+          <p>
+            产品没有销售演示账号，所有客户接入前都要先跑一周真实压测。我们更愿意用你集群里的
+            数据说话，而不是用一份精心挑选的 benchmark。
+          </p>
+          <p>
+            团队 40 人，其中 29 人写代码。调度器的核心作者仍在写核心模块，这是我们对延迟数字
+            有信心的原因。
+          </p>
+
+          <h2 class="section-title sub-title" id="story-title">核心团队</h2>
+          <div class="team-list">
+            <div class="team-row">
+              <span>韩竞</span><span>CEO / 联合创始人</span><span>前云厂商调度平台负责人</span><span>Shanghai</span>
+            </div>
+            <div class="team-row">
+              <span>苏黎</span><span>CTO / 联合创始人</span><span>分布式系统，K8s SIG 贡献者</span><span>Beijing</span>
+            </div>
+            <div class="team-row">
+              <span>许则</span><span>推理系统负责人</span><span>KV Cache 与批处理调度</span><span>Shanghai</span>
+            </div>
+            <div class="team-row">
+              <span>Ethan Lim</span><span>海外业务</span><span>前东南亚云服务商解决方案架构师</span><span>Singapore</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="time-title">
+      <div class="shell">
+        <div class="section-head">
+          <div>
+            <p class="label">Timeline</p>
+            <h2 class="section-title" id="time-title">六年，<span class="thin">只做一张网</span></h2>
+          </div>
+          <p class="section-note">没有做过别的产品线。所有融资都花在调度器与推理层上。</p>
+        </div>
+
+        <ol class="milestones">
+          <li><span class="y">2019</span><span class="t">公司成立</span><span class="d">四个人在张江的一间会议室里写出第一版调度原型。</span></li>
+          <li><span class="y">2020</span><span class="t">第一个生产集群</span><span class="d">为一家自动驾驶公司接管 64 张卡，排队时间从 4 小时降到 20 分钟。</span></li>
+          <li><span class="y">2021</span><span class="t">推理服务上线</span><span class="d">动态批处理把单卡吞吐提升 2.6 倍，第一个视频客户接入。</span></li>
+          <li><span class="y">2022</span><span class="t">A 轮融资</span><span class="d">团队扩到 18 人，开始做多集群联邦调度。</span></li>
+          <li><span class="y">2023</span><span class="t">私有化版本</span><span class="d">通过等保三级测评，进入金融与医疗行业。</span></li>
+          <li><span class="y">2025</span><span class="t">纳管破万卡</span><span class="d">12,480 张卡在 38 个生产集群中运行，平均利用率 86%。</span></li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="cta">
+      <div class="shell cta-inner">
+        <div>
+          <p class="label">Hiring</p>
+          <h2 class="cta-title">我们在招<br>写调度器的人。</h2>
+        </div>
+        <div class="cta-side">
+          <p>不要求会调参，但要求读过 etcd 或 K8s scheduler 的源码。简历请直接发邮箱。</p>
+          <a class="btn" href="contact.html">投递简历 <span aria-hidden="true">→</span></a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+</body>
+</html>
